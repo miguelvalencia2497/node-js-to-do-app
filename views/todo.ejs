@@ -2,6 +2,7 @@
 	<head>
 		<title>Todo List</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="assets/todo-list.js"></script>
 		<link rel="stylesheet" href="/assets/styles.css" type="text/css">
 	</head>
 	<body>
@@ -11,9 +12,9 @@
 				<button type="submit">Add Item</button>
 			</form>
 			<ul>
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
+				<% for(var todo in todos) { %>
+					<li><%= todos[todo].item %></li>
+				<% } %>
 			</ul>
 		</div>
 	</body>
